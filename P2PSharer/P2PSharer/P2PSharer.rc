@@ -1,0 +1,246 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\P2PSharer.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\P2PSharer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 250, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 P2PSharer"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    DEFPUSHBUTTON   "确定",IDOK,193,45,50,13,WS_GROUP
+    LTEXT           "IPv6对等网资源共享系统(客户端)，1.0 版",IDC_STATIC,42,14,154,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009 李巍 吉林大学计算机科学与技术学院",IDC_STATIC,42,26,178,8
+END
+
+IDD_P2PSHARER_DIALOG DIALOGEX 0, 0, 346, 402
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "P2PSharer"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "资源信息",IDC_STATIC,15,115,316,120
+    CONTROL         "",IDC_LIST_SRCINFO,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,25,130,296,70
+    PUSHBUTTON      "刷新资源",IDC_BTN_REFRESHSRC,216,211,50,13
+    PUSHBUTTON      "下载选定资源",IDC_BTN_DOWNLOADSRC,271,211,50,13
+    GROUPBOX        "下载信息",IDC_STATIC,15,245,316,115
+    LTEXT           "下载进度:",IDC_STATIC,25,260,55,10
+    CONTROL         "",IDC_PROGRESS_DOWN,"msctls_progress32",WS_BORDER,25,271,208,10
+    LTEXT           "信息：",IDC_STATIC,25,284,24,10
+    EDITTEXT        IDC_EDIT_NEWS,25,295,296,55,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "关闭",IDCANCEL,271,372,50,13
+    GROUPBOX        "共享目录",IDC_STATIC,15,65,316,41
+    EDITTEXT        IDC_EDIT_SHAREFOLDER,25,82,181,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE,216,82,50,13
+    PUSHBUTTON      "打开共享目录",IDC_BTN_OPENSHAREFOLDER,271,82,50,13
+    GROUPBOX        "服务器设置",IDC_STATIC,15,15,316,40
+    EDITTEXT        IDC_EDIT_SRVADDR,75,31,131,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "服务器IP地址:",IDC_STATIC,25,32,48,13
+    PUSHBUTTON      "测试服务器",IDC_BTN_SRVTEST,271,31,50,13
+    PUSHBUTTON      "发布资源",IDC_BTN_DISTRIBUTESOURCE,25,211,50,13
+    PUSHBUTTON      "修改地址",IDC_BTN_CHNSRVADDR,216,31,50,13
+    PUSHBUTTON      "运行资源",IDC_BTN_RUNSRC,271,269,50,13,WS_DISABLED
+    EDITTEXT        IDC_EDIT_PROCESS,239,271,15,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "%",IDC_STATIC,255,271,8,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "P2PSharer.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "P2PSharer.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_P2PSHARER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 15
+        RIGHTMARGIN, 331
+        VERTGUIDE, 25
+        VERTGUIDE, 206
+        VERTGUIDE, 266
+        VERTGUIDE, 271
+        VERTGUIDE, 321
+        TOPMARGIN, 15
+        BOTTOMMARGIN, 387
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 55
+        HORZGUIDE, 65
+        HORZGUIDE, 106
+        HORZGUIDE, 115
+        HORZGUIDE, 130
+        HORZGUIDE, 200
+        HORZGUIDE, 210
+        HORZGUIDE, 225
+        HORZGUIDE, 235
+        HORZGUIDE, 245
+        HORZGUIDE, 260
+        HORZGUIDE, 350
+        HORZGUIDE, 355
+        HORZGUIDE, 360
+        HORZGUIDE, 370
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 P2PSharer(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 套接字初始化失败。"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\P2PSharer.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
